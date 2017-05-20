@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style type="text/css">
+	
+</style>
+<body>
+	<div class="home_out">
+		
+		<div class="zuijin">
+			<h3>最近发布</h3>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="page"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	/*$('.page').createPage(function(n){
+		
+		
+		console.log(n);
+	},{
+		showTurn:false,//是否显示跳转,默认可以
+		showSumNum:false//是否显示总页码
+	},{
+		"borderColor":"#ccc",//边线颜色
+		"currentColor":"#000",//当前页码的字体颜色
+	});*/
+	
+	$('.page').pagination({
+	    callback:function(api){
+	        $('.now').text(api.getCurrent());
+	    }
+	},function(api){
+	    $('.now').text(api.getCurrent());
+	});
+</script>
+</html>

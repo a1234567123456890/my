@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style type="text/css">
+	form{
+		
+	}
+	.div1,.div2{
+		font-size: 20px;padding-top:30px;
+		margin-left:50px
+	}
+	.div1 input{
+		width:500px
+	}
+	.div2 .con{
+		width:500px;height: 200px;margin-left:59px
+	}
+	.div2 span{
+		position: absolute;
+		top:305px;left:210px
+	}
+	textarea{
+		font-size: 16px;
+	}
+	.send{
+		width:100px;height: 40px;background: #00B7FF;border: none;color:#fff;border-radius: 10px;
+		margin: 10px 0 0 490px
+	}
+</style>
+<body>
+	
+	<form action="/users/list" method="post">
+		<div class="div1">
+			标题：<input type="text" name="title" class="biaoti"/>
+		</div>
+		<div class="div2">
+			<span>内容：</span><textarea name="con" class="con" placeholder="来都来了，留下点什么吧~"></textarea>
+		</div>
+		<input type="submit" value="发布留言" class="send"/>
+	</form>
+</body>
+</html>

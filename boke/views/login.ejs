@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <style>
+    	body{
+    		background:url(/images/login.jpg)no-repeat;
+    		background-size:100% 120%;
+    	}
+    </style>
+</head>
+<body >
+
+	
+	<form action="/users/login" method="post" style="width:500px;margin:300px auto;">
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">账号：</span>
+		  <input type="text" name="user" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group" style="padding-top:30px">
+		  <span class="input-group-addon" id="basic-addon1">密码：</span>
+		  <input type="text" name="pwd" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+		</div>
+		
+		<input type="submit" value="登录" class="btn btn-success" style="width:150px;margin:20px 0 0 180px;"/>
+	</form>
+</body>
+</html>

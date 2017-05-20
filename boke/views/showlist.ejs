@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<%- include('header.ejs')%>
+	<table class="table">
+	    	<tr>
+	    		<th>标题</th>
+	    		<th>内容</th>
+	    	</tr>
+	    	<%  shuju.forEach(function(item,index){  %>
+		    	<tr>
+		    		<td><%- item.title  %></td>
+		    		<td><%- item.con %></td>
+		    	</tr>
+	    	<%  }) %>
+	    	
+    </table>
+</body>
+</html>

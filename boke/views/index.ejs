@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8" />
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+		<script type="text/javascript" src='/javascripts/angular.min.js' charset="utf-8"></script>
+		<script type="text/javascript" src='/javascripts/jquery-2.2.3.min.js' charset="utf-8"></script>
+		<script type="text/javascript" src='/javascripts/bootstrap.min.js' charset="utf-8"></script>
+
+
+<script src="/javascripts/jquery.pagination.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body ng-app>
+  	<%- include('time.ejs')%>
+	  <header>
+			<div class="wrap">
+			  	<img src="/images/logo.gif"/>
+			  	<span class="s1"><p>充满鲜花的世界到底在哪里</p><p>如果它真的存在</p><p>那么我一定要去&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp--&nbsp<追梦赤子心></p></span>
+			  	<% if(!user){ %>
+			  	<button onclick="location.href='/login'" class="btn btn-default login">登录</button>
+			   	<button onclick="location.href='/register'" class="btn btn-default register">注册</button>
+					<% }else{ %>
+			  	<div style="float:right" class="wel"><span>欢迎：<%- user %>!</span><button id="tuichu" onclick="location.href='/relogin'" class="btn btn-default">退出</button></div>
+					<% } %>
+			</div>
+		</header>
+		
+	  <div class="nav">
+	  	<div class="wrap">
+	  		<ul class="nav nav-tabs">
+				  <li class="active"><a href="#a" data-toggle="tab">主页</a></li>
+				  <li><a href="#b" data-toggle="tab">个人日记</a></li>
+				  <li><a href="#c" data-toggle="tab">HTML5</a></li>
+				  <li><a href="#d" data-toggle="tab">关于博主</a></li>
+				  <li><a href="#e" data-toggle="tab">留言板</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="a">
+							<%- include('home.ejs')%>
+					</div>
+					<div class="tab-pane" id="b">
+						<%- include('riji.ejs')%>
+					</div>
+					<div class="tab-pane" id="c">
+						<%- include('h5.ejs')%>
+					</div>
+					<div class="tab-pane" id="d">
+						<%- include('about.ejs')%>
+					</div>
+					<div class="tab-pane" id="e">
+						<%- include('liuyan.ejs')%>
+					</div>
+				</div>
+	  	</div>
+	  </div>
+	  
+	  
+
+	  
+	  
+  </body>
+  		
+</html>

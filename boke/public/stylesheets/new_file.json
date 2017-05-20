@@ -1,0 +1,17 @@
+			
+			
+			
+			
+			{
+				"name":"铭铭",
+				"sex":"汉子",
+				"contact":{
+					"phone":"不告诉你",
+					"email":"191003471@qq.com"
+				},
+				"address":"zhengzhou",
+				"skills":["HTML","css","js","jQ","vue","react",
+							"ionic","node","angular"],
+							
+				"hobby":["敲代码","狂敲代码","拼命敲代码"]
+			}

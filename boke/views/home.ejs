@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style type="text/css">
+	.home_out{
+		padding: 30px;
+	}
+	.tuijian{
+		border-bottom:1px solid #ccc;height: 350px;
+	}
+	.home_list{
+		width:300px;height: 251px;border:1px solid #ccc;font-size: 18px;text-align: center;
+		line-height: 51px;float:left;margin:10px 20px
+	}
+	.home_list img{
+		width:300px;
+	}
+	.home_list1{
+		border:1px solid #ccc;height: 251px;padding: 20px;
+	}
+	.home_list1 img{
+		width:300px;float:left;margin-right:20px
+	}
+	.home_p{
+		font-size: 18px;line-height: 28px;
+	}
+	.page{
+		width:800px;height: 100px;
+	}
+</style>
+<body>
+	<div class="home_out">
+		<div class="tuijian">
+			<h3>推荐文章</h3>
+			<div class="home_list">
+				<img src="/images/a.jpg"/>
+				<p><a href="#">浅谈node.js</a></p>
+			</div>
+			<div class="home_list">
+				<img src="/images/a.jpg"/>
+				<p><a href="#">web前端工程师常见问题</p></a>
+			</div>
+			<div class="home_list">
+				<img src="/images/a.jpg"/>
+				<p><a href="#">浅谈面向对象与面向过程</a></p>
+			</div>
+		</div>
+		
+		<div class="zuijin">
+			<h3>最近发布</h3>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="#">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			<div class="home_list1">
+				<a href="#"><img src="/images/a.jpg"/></a>
+				<div class="home_right">
+					<h3><a href="3">全球爆发的勒索病毒到底有多可怕</a></h3>
+					<p>&nbsp;&nbsp;&nbsp;<span>2345次浏览</span>&nbsp;&nbsp;&nbsp;<span>123条评论</span>&nbsp;&nbsp;&nbsp;<span>2天前发布</span></p>
+					<p class="home_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis quas cupiditate consequatur velit quis sapiente eligendi veniam facilis soluta pariatur natus animi alias maxime repellat aliquam voluptate nemo mollitia!</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="page"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	/*$('.page').createPage(function(n){
+		
+		
+		console.log(n);
+	},{
+		showTurn:false,//是否显示跳转,默认可以
+		showSumNum:false//是否显示总页码
+	},{
+		"borderColor":"#ccc",//边线颜色
+		"currentColor":"#000",//当前页码的字体颜色
+	});*/
+	
+	$('.page').pagination({
+	    callback:function(api){
+	        $('.now').text(api.getCurrent());
+	    }
+	},function(api){
+	    $('.now').text(api.getCurrent());
+	});
+</script>
+</html>
